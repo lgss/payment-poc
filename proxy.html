@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+<body>
+    <form id='paymentForm' method='post'>
+        <h1>Payment via proxy</h1>
+        <h2>Details</h2>
+        <div class="form-row">
+            <label for="instance">URL</label> <input type="text" id='instance' value="https://www.civicaepay.co.uk/NorthamptonshireXMLTest/PaylinkXMLUI/Default.aspx" required/>
+        </div>   
+        <div class="hide" id="inputs"><p>inputs</p></div>
+        <div class="form-row">
+            <button id="formBtn" type="submit" value="Pay">Pay</button>
+        </div>
+    </form>
+    <script src="proxy.js"></script>
+</body>
+</html>
+
+<style>
+    form {
+        max-width: 800px;
+        background-color: whitesmoke;
+        list-style-type: none;
+        padding: 0;
+        border-radius: 3px;
+    }
+    .form-row {
+        display: flex;
+        justify-content: flex-end;
+        padding: .5em;
+    }
+    .form-row > label {
+        padding: .5em 1em .5em 0;
+        flex: 1;
+    }
+    .form-row > input {
+        flex: 4;
+    }
+    .hide {
+        display:none;
+    }
+</style>

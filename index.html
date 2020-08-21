@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+<body>
+    <form id='paymentForm' method='post'>
+        <h1>Payment</h1>
+        <div id="hide">
+            <h2>Details</h2>
+            <div class="form-row">
+                <label for="instance">Instance</label> <input type="text" id='instance' value="https://www.civicaepay.co.uk/NorthamptonshireXMLTest/PaylinkXMLUI/Default.aspx" required/>
+            </div>
+            <div class="form-row">
+                <label for="ReturnURL">Return URL</label><input type="text" id='ReturnURL' name='ReturnURL' value="https://www.google.com/"/>
+            </div>
+            <div class="form-row">
+                <label for="BackButtonURL">Back Button URL</label><input type="text" id='BackButtonURL' name='BackButtonURL' value="https://www.google.com/" />
+            </div>
+        </div>
+
+        <h2>Choose merchant</h2>
+        <div class="form-row">
+            <label>Making payment to</label>
+            <div class="radioGroup">
+                <input type="radio" id="west" name="council" value="west"><label for="west">West</label>
+                <input type="radio" id="north" name="council" value="north"><label for="north">North</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="CallingApplicationID">Calling Application ID</label> <input type="text" id='CallingApplicationID' name='CallingApplicationID' readonly/>
+        </div>
+        <div class="form-row">
+            <label for="FundCode">Fund code</label><input type="text" id='FundCode' name='FundCode' readonly/>
+        </div>
+        <div class="form-row">
+            <label for="PaymentSourceCode">Payment Source Code</label><input type="text" id='PaymentSourceCode' name='PaymentSourceCode' readonly/>
+        </div>
+        <div class="form-row">
+            <label for="CallingApplicationTransactionReference">Calling Application Transaction Reference</label><input type="text" id='CallingApplicationTransactionReference' name='CallingApplicationTransactionReference' />
+        </div>
+        <h2>Add payment</h2>
+        <div class="form-row">
+            <label for="glCode">GL Code</label> <input type="text" id='glCode' required/>
+        </div>
+        <div class="form-row">
+            <label for="narrative">Narrative</label> <input type="text" id='narrative' required/>
+        </div>
+        <div class="form-row">
+        <label for="amount">Amount</label> <input type="number" id='amount' required/><br>
+        </div>
+        <div class="form-row">
+            <button id="addLineBtn" value="Add">Add</button>
+        </div>
+        <div id="payments">
+            <h2 >Payments</h2>
+        </div>
+        <div class="form-row">
+            <label for="PaymentTotal">Payment Total</label><input type="number" id='PaymentTotal' name='PaymentTotal' value=0 readonly/><br>
+        </div>
+    
+        <div class="form-row">
+            <button id="formBtn" type="submit" value="Pay">Pay</button>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+    form {
+        max-width: 600px;
+        background-color: whitesmoke;
+        list-style-type: none;
+        padding: 0;
+        border-radius: 3px;
+    }
+    .form-row {
+        display: flex;
+        justify-content: flex-end;
+        padding: .5em;
+    }
+    .form-row > label {
+        padding: .5em 1em .5em 0;
+        flex: 1;
+    }
+    .form-row > input {
+        flex: 2;
+    }
+    .radioGroup {
+        flex: 2;
+        margin-bottom: 10px;
+    }
+    #hide {
+        display:none;
+    }
+</style>

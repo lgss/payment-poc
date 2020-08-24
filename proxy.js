@@ -19,8 +19,8 @@ function submitForm(e) {
     addInput("CallingApplicationTransactionReference", `ProxyTest_${Date.now()}`);
     addInput("Payment_1", "BLB-J6300-0110000929|42|10.00|SE|Blue Badge||||||||||||");
     addInput("PaymentTotal", "10");
-    addInput("ReturnURL", "https://www.google.com");
-    addInput("BackButtonURL", "https://www.google.com");
+    addInput("ReturnURL", "http://localhost:8080/result.html");
+    addInput("BackButtonURL", "http://localhost:8080");
     form.submit();
 }
 

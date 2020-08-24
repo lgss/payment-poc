@@ -1,0 +1,23 @@
+{
+  "name": "payment-poc",
+  "version": "1.0.0",
+  "description": "Proof of Concept work to extend the use of CivicaPay for multiple merchant accounts utilising PayLink with form operations in place of Web Pay Staff and Web Pay Public.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "http-server --port 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lgss/payment-poc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lgss/payment-poc/issues"
+  },
+  "homepage": "https://github.com/lgss/payment-poc#readme",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}

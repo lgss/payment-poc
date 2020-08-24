@@ -14,7 +14,6 @@ function submitForm(e) {
     e.preventDefault();
     form.action = document.getElementById('instance').value
     addInput("CallingApplicationID", "Outsystems");
-    addInput("FundCode", "42");
     addInput("PaymentSourceCode", "01");
     addInput("CallingApplicationTransactionReference", `ProxyTest_${Date.now()}`);
     addInput("Payment_1", "BLB-J6300-0110000929|42|10.00|SE|Blue Badge||||||||||||");
